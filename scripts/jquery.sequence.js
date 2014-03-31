@@ -1,6 +1,6 @@
-/*
+/*!
 Sequence.js (http://www.sequencejs.com)
-Version: 1.0.1.1
+Version: 1.0.1.2
 Author: Ian Lunn @IanLunn
 Author URL: http://www.ianlunn.co.uk/
 Github: https://github.com/IanLunn/Sequence
@@ -8,7 +8,7 @@ Github: https://github.com/IanLunn/Sequence
 This is a FREE script and is available under a MIT License:
 http://www.opensource.org/licenses/mit-license.php
 
-Sequence.js and its dependencies are (c) Ian Lunn Design 2012 - 2013 unless otherwise stated.
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 unless otherwise stated.
 
 Sequence also relies on the following open source scripts:
 
@@ -1067,10 +1067,10 @@ Sequence also relies on the following open source scripts:
 					if(defaultOption === ".sequence-preloader") { //if setting up the preloader...
 						self._defaultPreloader(self.container, self.transitionsSupported, self.animationPrefix); //get the default preloader
 					}
-					return $(defaultOption); //return the default element
+					return $(defaultOption, self.container); //return the default element
 
 				default: //if using a developer defined selector...
-					return $(devOption); //return the developer defined element
+					return $(devOption, self.container); //return the developer defined element
 			}
 		},
 
